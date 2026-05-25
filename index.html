@@ -154,8 +154,26 @@
       outline-offset: 3px;
     }
 
-    .bellefair-regular {
-
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+    }
+    @media (min-width: 700px) {
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+      .gallery .full {
+        grid-column: 1 / -1;
+      }
     }
   </style>
 
@@ -207,6 +225,17 @@
           </ul>
         </div>
 
+      </section>
+
+      </section>
+
+      <section class="gallery" aria-label="Photos du restaurant">
+        <img class="full" src="img/1.jpeg" alt="" loading="lazy">
+        <img src="img/2.jpeg" alt="" loading="lazy">
+        <img src="img/3.jpeg" alt="" loading="lazy">
+        <img class="full" src="img/4.jpeg" alt="" loading="lazy">
+        <img src="img/5.jpeg" alt="" loading="lazy">
+        <img src="img/6.jpeg" alt="" loading="lazy">
       </section>
 
     </main>
